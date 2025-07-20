@@ -23,7 +23,7 @@ header {
 
 .logo-img-adv{
   width: 50px;
-  height: auto;
+  height: 50px;
   -webkit-object-fit: cover;
   object-fit: cover;
 }
