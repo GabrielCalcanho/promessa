@@ -24,7 +24,10 @@ header {
 .logo-img-adv{
   width: 20%;
   height: auto;
+  -webkit-object-fit: cover;
+  object-fit: cover;
 }
+
 
 .logo-adv{
   background-color: #000000;
