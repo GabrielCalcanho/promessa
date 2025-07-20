@@ -23,6 +23,7 @@ header {
 
 .logo-img-adv{
   width: 25%;
+  height: auto;
 }
 
 .logo-adv{
@@ -86,11 +87,7 @@ padding-left:10px ;
   text-transform: uppercase;
 }
 
-.img-conf{
-  width: 100%;
-  height: 250px;
 
-}
 
 .bloco-1 {
   background-color: #f8f6f6;
