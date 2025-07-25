@@ -1,27 +1,29 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Estilos do corpo */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    background-color: #fff;
 }
 
-body {
-display: flex;
-min-height: 100vh;
-flex-direction: column;
-margin: 0;
-background-color: #fff;
-}
+/* Estilos do conteúdo principal */
 
 main{
   flex:1;
 }
 
 header {
-  background-color: #f8f6f6;
+     background-color: #f8f6f6;
 }
 
-
+/* Estilos do menu hamburguer */
 .hamburguer{
     width:25px ;
     height:15px ;
@@ -43,95 +45,91 @@ header {
     height: 3px;
     border-radius: 2px;
 }
+/* fim do estilo hamburguer*/
 
 
-
+/* Estilos do container */
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
 
 
 }
 
 .promessa-titulo{
- margin-right: auto;
-padding-left:.5rem;
+    margin-right: auto;
+    padding-left:.5rem;
 }
 
 .logo-img-adv{
-  width: 50px;
-  height: 50px;
-  -webkit-object-fit: cover;
-  object-fit: cover;
+    width: 50px;
+    height: 50px;
+    -webkit-object-fit: cover;
+    object-fit: cover;
 }
 
 
 .logo-adv{
-  background-color: #000000;
-  padding:60px;
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  text-align: center;
+    background-color: #000000;
+    padding:60px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
 
 }
 
 .japuiba{
-  font-size: 15px;
-}
+    font-size: 15px;
+    }
 
 
 
 .img-logo {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
 }
 
 
-.hamburguer {
-  font-size: 32px;
-  color: #333;
-  cursor: pointer;
-}
+/* Estilos do menu */
 
 .nav-menu {
-  width: 100%;
-  overflow: hidden;
-  background-color: #000;
-  max-height: 0;
-  transition: max-height 0.4s ease;
-  position: absolute;
-  top: 80px;
-  left: 0;
-  z-index: 10;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 10;
 
 }
 
 .nav-menu.active {
-  max-height: 400px;
+    max-height: 400px;
 }
 
 .menu {
-  list-style: none;
-  padding: 5px 0;
-  margin: 0;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
 }
 
 .menu li a {
-  display: block;
-  padding: 15px 30px;
-  text-decoration: none;
-  color: white;
- 
-  text-transform: uppercase;
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
 }
 
-
+/* Estilos da seção "Quem Somos" */
 .quem-somos-container{
     display: flex;
     flex-direction:column ;
@@ -141,58 +139,59 @@ padding-left:.5rem;
 }
 
 
-
-
 .titulo-quem-somos{
     text-align: center;
   
 }
 .titulo-missao{
-  text-align: center;
+    text-align: center;
     padding: 1rem;
 }
 
 
-
+/* Estilos dos parágrafos */
 .paragrafo-2{
-  opacity: 0.5;
-  font-style: italic;
-  text-align: center;
-padding: 1rem;
+    opacity: 0.5;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
 
 }
+
+
+/* Estilos da seção "Missão e Visão" */
 
 .missao-visao{
-  display: flex;
-  flex-direction: column;
- background-color: #c9c8c8;
- padding: 1rem;
- gap: 1rem;
-
-
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
 
 }
 
+/* Estilos do texto em negrito */
 .negrito {
-  font-weight: bold;
+    font-weight: bold;
 }
 
+
+/* Estilos do rodapé */
 
 .footer{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #c9c8c8;
+    padding: 40px;
 
  
 }
 
 .container-footer{
-  color: #000000;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 ;
 }
 
