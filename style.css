@@ -73,11 +73,30 @@ margin-right: auto;
 padding-left:.5rem;
 }
 
-.hamburguer {
-  font-size: 32px;
-  color: #333;
-  cursor: pointer;
+
+.hamburguer{
+    width:25px ;
+    height:15px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
 }
+
+.linha{
+    height: 3px;
+    background-color: #000000;
+    border-radius: 2px;
+}
+
+.linha-2{
+    width: 15px;
+    background-color: #000000;
+    height: 3px;
+    border-radius: 2px;
+}
+
+
 
 .nav-menu {
   width: 100%;
