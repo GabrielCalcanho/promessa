@@ -32,6 +32,11 @@ header {
 
 }
 
+.promessa-titulo{
+ margin-right: auto;
+padding-left:.5rem;
+}
+
 .logo-img-adv{
   width: 50px;
   height: 50px;
