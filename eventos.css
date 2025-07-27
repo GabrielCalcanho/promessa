@@ -140,53 +140,42 @@ header {
     text-transform: uppercase;
 }
 
-/* Estilos da seção "Quem Somos" */
-.quem-somos-container{
-    display: flex;
-    flex-direction:column ;
-    padding: 1rem;
-    gap: 1rem;
-       color: var(--text-color);
-}
 
-
-.titulo-quem-somos{
+.titulo-eventos{
     text-align: center;
-    color: ;
-  
-}
-.titulo-missao{
-    text-align: center;
-    padding: 1rem;
-}
-
-
-/* Estilos dos parágrafos */
-.paragrafo-2{
-    opacity: 0.5;
-    font-style: italic;
-    text-align: center;
-    padding: 1rem;
-
-}
-
-
-/* Estilos da seção "Missão e Visão" */
-
-.missao-visao{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
     color: var(--text-color);
+    font-size: 2rem;
+    padding: 20px;
+}
+
+
+/* Estilos da seção "Quem Somos" */
+.eventos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 
 }
 
-/* Estilos do texto em negrito */
-.negrito {
-    font-weight: bold;
+.img-entre-amigos {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+   
 }
 
+.cards{
+    border: 1px solid var(--text-color);
+    border-radius:  20px;
+     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    padding: 20px;
+    margin-top: 10px;
+
+
+}
+    
 
 /* Estilos do rodapé */
 

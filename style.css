@@ -5,13 +5,22 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+:root{
+  --primary-color: #0048e8;
+  --secondary-color: #e19e2b;
+  --text-color: #ffffff;
+  --terciary-color: #084c85;
+
+}
+
 body {
 display: flex;
 min-height: 100vh;
 flex-direction: column;
 margin: 0;
+background-color: var(--terciary-color) ;
 
-  background-color: #fff;
 }
 
 main{
@@ -30,6 +39,7 @@ header {
   justify-content: space-between;
   padding: 15px 20px;
   
+  
 }
 
 .promessa-titulo{
@@ -37,7 +47,7 @@ header {
 }
 
 .logo-img-adv{
-  width: 23rem;
+  width: 24.4rem;
   -webkit-object-fit: cover;
   object-fit: cover;
 }
@@ -46,7 +56,7 @@ header {
 .logo-adv{
 display: flex;
 align-items: center;
-justify-content: space-between;
+justify-content: center;
 }
 
 .japuiba{
@@ -67,25 +77,32 @@ padding-left:.5rem;
 
 
 .hamburguer{
-    width:25px ;
-    height:15px ;
+    width: 25px;
+    height: 13px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    cursor: pointer;
+    cursor: pointer;  
+
 }
 
 .linha{
-    height: 3px;
+    height:3px;
     background-color: #000000;
     border-radius: 2px;
+    
+   
+  
+
 }
 
 .linha-2{
     width: 15px;
     background-color: #000000;
-    height: 3px;
+    height:3px;
     border-radius: 2px;
+  
+     
 }
 
 
@@ -93,13 +110,14 @@ padding-left:.5rem;
 .nav-menu {
   width: 100%;
   overflow: hidden;
-  background-color: #000;
+  background-color: #bd821e;
   max-height: 0;
-  transition: max-height 0.4s ease;
+  transition: all .4s linear;
   position: absolute;
   top: 80px;
   left: 0;
   z-index: 10;
+ 
 
 }
 
@@ -109,7 +127,7 @@ padding-left:.5rem;
 
 .menu {
   list-style: none;
-  padding: 5px 0;
+  padding: 1rem 0;
   margin: 0;
 }
 
@@ -125,13 +143,13 @@ padding-left:.5rem;
 
 
 .bloco-1 {
-  background-color: #c9c8c8;
+  background-color:var(--secondary-color);
   text-align: center;
   padding: 40px;
 }
 
 .bloco-2{
-    background-color: #c9c8c8;
+    background-color: var(--secondary-color);
     text-align: center;
     padding: 40px;
 
@@ -147,6 +165,7 @@ padding-left:.5rem;
   justify-content: space-between;
   align-items: center;
   justify-content: center;
+  
 
 }
 
@@ -159,6 +178,7 @@ padding: 15px;
 gap: 8px;
 line-height: 27px;
 padding-top: 50px;
+color: var(--text-color);
 
 }
 
@@ -192,13 +212,13 @@ padding: 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #c9c8c8;
+  background-color: var(--secondary-color);
   padding: 40px;
  
 }
 
+
 .container-footer{
-  color: #000000;
   display: flex;
   align-items: center;
   gap: 10px;
