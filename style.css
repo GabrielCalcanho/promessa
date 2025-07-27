@@ -40,6 +40,7 @@ header {
   padding: 15px 20px;
   
   
+  
 }
 
 .promessa-titulo{
@@ -47,7 +48,7 @@ header {
 }
 
 .logo-img-adv{
-  width: 24.4rem;
+  width:388px;
   -webkit-object-fit: cover;
   object-fit: cover;
 }
