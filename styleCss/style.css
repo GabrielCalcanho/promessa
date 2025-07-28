@@ -29,6 +29,13 @@ main{
 
 header {
   background-color: #f8f6f6;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+z-index: 9999;
+
 }
 
 
@@ -38,7 +45,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
-  
+
   
   
 }
@@ -60,6 +67,7 @@ header {
   height: auto;
   -webkit-object-fit: cover;
   object-fit: cover;
+margin-top: 84px;
 }
 
 

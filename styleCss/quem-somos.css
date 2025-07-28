@@ -32,6 +32,12 @@ main{
 
 header {
      background-color: #f8f6f6;
+     position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+     right: 0;
+    z-index: 9999;
 }
 
 /* Estilos do menu hamburguer */
@@ -146,13 +152,14 @@ header {
     flex-direction:column ;
     padding: 1rem;
     gap: 1rem;
-       color: var(--text-color);
+    color: var(--text-color);
+    margin-top: 85px;
 }
 
 
 .titulo-quem-somos{
     text-align: center;
-    color: ;
+    
   
 }
 .titulo-missao{
