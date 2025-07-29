@@ -64,6 +64,7 @@ z-index: 9999;
 
 .logo-capa{
   width: 100%;
+  max-width: 100%;
   height: auto;
   -webkit-object-fit: cover;
   object-fit: cover;
@@ -75,9 +76,15 @@ margin-top: 84px;
 display: flex;
 align-items: center;
 justify-content: center;
+
+}
+
+.logo{
+  display: flex;
 }
 
 .japuiba{
+  display: flex;
   font-size: 15px;
 }
 
@@ -242,4 +249,73 @@ padding: 20px;
   gap: 10px;
 
 }
+
+
+
+/* ----- DESKTOP ----- */
+@media (min-width:768px){       /* escolha 1024px se preferir */
+
+  .hamburguer{
+    display: none;
+    
+  }
+
+ 
+  
+
+ 
+
+  .logo{
+    display: flex;
+    align-items: center;
+  }
+
+  .japuiba{
+    display: flex;
+  }
+
+  .nav-menu{
+    position: static;
+    width: auto;
+    max-height: none;
+    background-color: transparent;
+  }
+
+  .menu{
+    display: flex;
+    gap: 2rem;
+ 
+  }
+ 
+  .menu li a{
+    color: var(--terciary-color);
+    font-weight: bold;
+    padding: 0;
+    position: relative;
+  }
+
+  .menu li a::after{
+    content: "";
+    position:absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: all .3s ease;
+
+  }
+
+  .menu li a:hover::after{
+    width: 100%;
+  }
+  
+
+ 
+  
+
+}
+
+
+
 
