@@ -1,321 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
-
-:root{
-  --primary-color: #0048e8;
+/* Variáveis de cores globais */
+:root {
+  --green-diferent:#d7df23;
   --secondary-color: #e19e2b;
-  --text-color: #ffffff;
-  --terciary-color: #084c85;
+    --primary-color: #084c85;       /* Cor principal, usada para textos e elementos destacados */
+  --background-color: #f2f2f2;    /* Cor de fundo neutra */
+  --white-color: #ffffff;         /* Branco, para fundos ou textos secundários */
+  --highlight-color: #ffcc00;     /* Cor de destaque, botões, chamadas para ação */
+  --alert-color: #e63946;         /* Cor para alertas e erros */
+  --interactive-color: #3a86ff;   /* Cor para links e efeitos hover */
+  --faint-blue: #6baed6;       /* Azul claro suave para textos principais */
+  --preto: #050a30;    /* Fundo bem leve, quase branco com tom de azul */     /* Branco padrão */
+  --highlight-color-yellow: #ffe082;     /* Amarelo pastel para destaques suaves */
+  --alert-color-2: #ef9a9a;         /* Vermelho claro, menos intenso para alertas */
+  --branco: #f4f6fc;   
 
-}
+  }
 
+/* Estilo do corpo da página */
 body {
-display: flex;
-min-height: 100vh;
-flex-direction: column;
-margin: 0;
-background-color: var(--terciary-color) ;
-
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  background-color:var(--branco);
 }
 
-main{
-  flex:1;
+/* Conteúdo principal ocupa o espaço restante */
+main {
+  flex: 1;
 }
 
+/* Cabeçalho fixo no topo */
 header {
-  background-color: #f8f6f6;
-  position: fixed;
+  background-color: var(--branco);
+  position:fixed ;
   width: 100%;
+  height: 100px;
   top: 0;
-  left: 0;
-  right: 0;
-z-index: 9999;
-
+  left:0 ;
+  z-index: 9999;
 }
 
-
-
-.container {
+/* Container da navegação */
+.nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
-
-  
-  
 }
 
-
-.banner-logo {
-  display: flex;
-  align-items: center;
-  justify-content:center;
-
+/* Logo e elementos relacionados */
+.logo {
+  display:flex;
 }
 
-.promessa-titulo{
-  padding: 0 .5rem;
+.japuiba {
+   display:flex; 
+   font-size:15px; 
 }
-
-.logo-capa{
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  -webkit-object-fit: cover;
-  object-fit: cover;
-margin-top: 84px;
-}
-
-
-.logo-adv{
-display: flex;
-align-items: center;
-justify-content: center;
-
-}
-
-.logo{
-  display: flex;
-}
-
-.japuiba{
-  display: flex;
-  font-size: 15px;
-}
-
 
 
 .img-logo {
-  width: 50px;
-  height: 50px;
+   width:50px; 
+   height:50px; 
 }
 
-.promessa-titulo{
-margin-right: auto;
-padding-left:.5rem;
+.promessa-titulo {
+   margin-right:auto; 
+   padding-left:.5rem; 
 }
 
-
-.hamburguer{
-    width: 25px;
-    height: 13px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;  
-
+/* Menu hambúrguer para dispositivos móveis */
+.hamburguer {
+   width:25px; 
+   height:13px; 
+   display:flex; 
+   flex-direction:column; 
+   justify-content:space-between; 
+   cursor:pointer; 
 }
 
-.linha{
-    height:3px;
-    background-color: #000000;
-    border-radius: 2px;
-    
-   
-  
-
+.linha {
+   height:3px; 
+   background-color:var(--preto); 
+   border-radius:2px; 
 }
 
-.linha-2{
-    width: 15px;
-    background-color: #000000;
-    height:3px;
-    border-radius: 2px;
-  
-     
+.linha-2 {
+   width:15px; 
+   height:3px; 
+   background-color:var(--preto); 
+   border-radius:2px; 
 }
 
-
-
+/* Menu de navegação oculto por padrão */
 .nav-menu {
-  width: 100%;
-  overflow: hidden;
-  background-color: #bd821e;
-  max-height: 0;
-  transition: all .4s linear;
-  position: absolute;
-  top: 80px;
-  left: 0;
-  z-index: 10;
- 
-
+   width:auto;
+   overflow:hidden;
+   background-color:var(--preto);
+   max-height:0;
+   transition:.4s all linear ;
+   position:absolute ;
+   top :6.3rem ;
+   left :0 ;
+   z-index :10 ;
 }
 
-.nav-menu.active {
-  max-height: 400px;
+/* Ativa o menu ao receber a classe 'active' */
+.nav-menu.active{
+    max-height :400px ;
 }
 
-.menu {
-  list-style: none;
-  padding: 1rem 0;
-  margin: 0;
+/* Lista do menu */
+.menu{
+    list-style:none ;
+    padding :1rem .5rem ;
+    margin :0 ;
 }
 
-.menu li a {
-  display: block;
-  padding: 15px 30px;
-  text-decoration: none;
-  color: white;
- 
-  text-transform: uppercase;
+.menu li a{
+    display:block ;
+    width: 100vh;
+    padding: .5rem;
+    text-decoration:none ;
+    color:var(--branco);
+    text-transform :uppercase ;
 }
 
-
-
-.bloco-1 {
-  background-color:var(--secondary-color);
-  text-align: center;
-  padding: 40px;
-}
-
+/* Bloco secundário com fundo secundário e centralizado */
 .bloco-2{
-    background-color: var(--secondary-color);
-    text-align: center;
-    padding: 40px;
+    background-color :var(--secondary-color) ;
+    text-align:center ;
+    padding :40px ;
+}
+
+.container-hero{
+  width: 100%;
+  height: 100vh;
+    background-color: var(--preto);
+color: var(--preto);
+font-size: 1.5rem;
+}
+
+
+.conteudo-hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-color:var(--branco);
+  padding-top: 100px;
+    transition: all 0.5s ease; /* animação suave */
+ 
+}
+.texto-hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: auto;
+}
+.titulo-hero{
+  font-family: "Poppins",sans-serif;
+  font-weight:500;
 
 }
 
-.img-bloco2{
-  width: 500px;
-  margin-top: 2px;
+.subtitulo-hero{
+ font-family:'caveat';
+ font-weight: 700;
+ font-size:3rem;
 }
 
-.programacoes{
+.subtitulo-2-hero{
+   margin-left: auto;
+   font-family: 'caveat';
+   font-weight: 700;
+}
+
+.button-evento{
+  padding: .6rem;
+  margin-top: 2rem;
+  border-radius: 20% 0 20% 0;
+  text-decoration: none;
+  color: var(--branco);
+  background-color: var(--alert-color);
+  cursor: pointer;
+  transition: all 0.5s ease; /* animação suave */
+}
+
+.button-evento:hover{
+  background-color:#e66060;
+
+}
+
+.titulo-hero-bem-vindo{
+  position: relative;
+  text-align: center;
+  font-size: 2.5rem;
+  text-shadow: 2px 3px  1px #f4f6fc;
+  top: 2rem ;
+  font-family: 'poppins',sans-serif;
+  font-weight: 800;
+
+}
+.texto-apresentacao{
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+p.paragrafo-apresentacao{
+  color: var(--branco);
+  text-align: center;
+  font-family: 'poppins',sans-serif;
+  font-size: 1.3rem;
+}
+
+.background-devocional{
+ background-color: var(--preto);
+}
+
+.container-conteudo-1{
+  width:auto;
+  height: auto;
+  margin: 0 10px;
+}
+
+.caixa-devocional{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  padding: .5rem 1rem;
+  color: var(--branco);
   
 
 }
 
-.programacao-container {
- display: flex;
-flex-direction: column;
+.mensagem-conteudo-1{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 300px;
+  padding: 30px;
+  margin: 10rem 1rem ;
+  background-color: var(--preto);
+
+}
+
+.mensagem-conteudo-1 p {
+ font-family:'poppins',sans-serif;
+ font-style: italic;
+ font-size: 1rem;
+ color: var(--branco);
+}
+.cap-ver{
+display: flex;
 align-items: center;
 justify-content: center;
-padding: 15px;
-gap: 8px;
-line-height: 27px;
-padding-top: 50px;
-color: var(--text-color);
-
+}
+.titulo-devocional{
+  font-family: sans-serif;
+  font-weight: 300;
 }
 
-.programacao-1{
+.titulo-promessa{
+  font-family: 'caveat',sans-serif;
+}
+.container-programacao{
+  margin: 0 .5rem;
+  height:auto;
+}
+ 
+.programacao-conteudo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 1.6rem;
 }
 
-.programacao-2{
+/* Cada evento ocupa metade da largura do container, menos o gap */
+.evento {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+ align-items: center;
+ text-align: center;
   justify-content: center;
-  align-items: center;
+  background-color: var(--branco);
+  padding: 1px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 100%;
+  height: 500px;
+
 }
 
-.location-container{
-display: flex;
-justify-content: center;
-padding: 20px;
-  
+.evento-2{
+  background-color: var(--preto);
+  color: var(--branco);
+}
+.evento-4{
+  background-color: var(--preto);
+  color: var(--branco);
 }
 
-.location-container iframe {
+.container-local{
+  height: 500px;
+  margin: 1rem 10px;
+  background-color: var(--branco);
+  box-shadow: 2px 2px 10px #c2b5b5 ;
   border-radius: 20px;
 }
 
+
+
+.conteudo-local{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 1rem;
+  padding:5rem;
+  
+}
+.caixa-local{
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: var(--branco);
+  margin: 0 1rem;
+}
+
+.botao-mapa{
+  text-decoration: none;
+   padding: .6rem;
+  margin-top: 2rem;
+  border-radius: 20% 0 20% 0;
+  text-decoration: none;
+  color: var(--branco);
+  background-color: var(--alert-color);
+  cursor: pointer;
+  transition: all 0.5s ease; /* animação suave */
+}
+
+.botao-mapa:hover{
+  background-color:#e66060;
+}
+
+
 .footer{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: var(--secondary-color);
-  padding: 40px;
- 
+   display:flex ;
+        justify-content :space-evenly ;
+        align-items:center ;
+        background-color:var(--secondary-color) ; /* Corrigido para usar variável corretamente */
+        padding:40px;
+        margin-top:0;
 }
+      
 
 
+/* Container do rodapé com espaçamento entre itens*/
 .container-footer{
-  display: flex;
+        display:flex ;
+        align-items:center ;
+        gap:10px;
+} 
+
+/* ----- MEDIA QUERIES PARA DESKTOP ----- */
+/*@media (min-width:px){*/
+/* Você pode ajustar os valores aqui para telas maiores */
+
+@media (min-width:768px){
+
+    body {
+        min-height:auto;
+        margin:auto;
+        /* Outros ajustes específicos para desktop podem ser adicionados aqui */
+}
+
+    .capa-img {width:max-content;}
+
+    .hamburguer {display:none;}
+
+    .nav-menu {position:absolute;}
+
+    .menu {display:flex;margin-left:auto;margin-right:auto;}
+
+
+   /*   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-
+  flex-wrap: wrap;  permite quebrar para a próxima linha 
+  gap: 10px;  espaçamento entre os eventos, pode ajustar 
+ flex: 1 1 calc(60% - 10px);
+  align-items: center;
+  justify-content: center; /*
+ 
 }
-
-
-
-/* ----- DESKTOP ----- */
-@media (min-width:768px){       /* escolha 1024px se preferir */
-
-  .hamburguer{
-    display: none;
-    
-  }
-
- 
-  
-
- 
-
-  .logo{
-    display: flex;
-    align-items: center;
-  }
-
-  .japuiba{
-    display: flex;
-  }
-
-  .nav-menu{
-    position: static;
-    width: auto;
-    max-height: none;
-    background-color: transparent;
-  }
-
-  .menu{
-    display: flex;
-    gap: 2rem;
- 
-  }
- 
-  .menu li a{
-    color: var(--terciary-color);
-    font-weight: bold;
-    padding: 0;
-    position: relative;
-  }
-
-  .menu li a::after{
-    content: "";
-    position:absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2px;
-    background-color: var(--secondary-color);
-    transition: all .3s ease;
-
-  }
-
-  .menu li a:hover::after{
-    width: 100%;
-  }
-  
-
- 
-  
-
-}
-
-
-
-

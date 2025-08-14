@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     margin: 0;
-    background-color:var(--terciary-color);
+    background-color:var(--preto);
  
 }
 
@@ -20,6 +20,10 @@ body {
   --text-color: #ffffff;
   --terciary-color: #084c85;
 --background-color: #bd821e;
+  --preto: #050a30;    /* Fundo bem leve, quase branco com tom de azul */     /* Branco padrão */
+  --highlight-color-yellow: #ffe082;     /* Amarelo pastel para destaques suaves */
+  --alert-color-2: #ef9a9a;         /* Vermelho claro, menos intenso para alertas */
+  --branco: #f4f6fc; 
 }
 
 
@@ -31,7 +35,7 @@ main{
 }
 
 header {
-     background-color: #f8f6f6;
+     background-color: var(--branco);
       position: fixed;
       width: 100%;
       height: auto;
@@ -53,13 +57,13 @@ header {
 
 .linha{
     height: 3px;
-    background-color: #000000;
+    background-color: var(--preto);
     border-radius: 2px;
 }
 
 .linha-2{
     width: 15px;
-    background-color: #000000;
+    background-color: var(--preto);
     height: 3px;
     border-radius: 2px;
 }
@@ -90,7 +94,7 @@ header {
 
 
 .logo-adv{
-    background-color: #000000;
+    background-color:var(--preto);
     padding:60px;
     display: flex;
     flex-direction: column;
@@ -119,14 +123,14 @@ header {
 .nav-menu {
     width: 100%;
     overflow: hidden;
-    background-color: var(--background-color);
+    background-color: var(--preto);
     max-height: 0;
     transition: max-height 0.4s ease;
     position: absolute;
     top: 80px;
     left: 0;
     z-index: 10;
-   color: var(--text-color);
+   color: var(--branco);
 }
 
 .nav-menu.active {
@@ -182,35 +186,28 @@ header {
     padding: 20px;
     flex-wrap: wrap;
     height: auto;
-   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+   box-shadow: 2px 2px 10px rgba(253, 252, 252, 0.3);
     color: var(--text-color);
     border-radius: 20px;
     overflow-x: auto;
      white-space: nowrap;
+     
 }
 
 .cards{
     border-radius:  20px;
      height: auto;
      width: 100%;
-    display: grid;
     gap: 10px;
-   display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: nowrap;
+   flex: 1 1 calc(50% - 20px);
+
+
 
    
 }
  
-
-
-   
-
-
-
-/* Estilos do rodapé */
-
-/*  Estilos do rodapé */
-
 .footer{
     display: flex;
     justify-content: space-evenly;
